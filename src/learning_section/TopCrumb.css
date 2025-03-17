@@ -1,0 +1,16 @@
+.crumb{
+ 
+  position: relative;
+  left: 150px;
+  top: -12px;
+}
+#chapter{
+font-size: 8px;
+}
+#topic{
+  font-size: 12px;
+}
+#subtopic{
+  font-size: 12px;
+
+}

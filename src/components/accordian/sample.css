@@ -1,0 +1,120 @@
+/* General Layout */
+.main-cont {
+    padding: 20px;
+  }
+  
+  .inner-cont {
+    display: flex;
+    gap: 20px;
+  }
+  
+  #btns-chap {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  
+  #No {
+    font-weight: bold;
+    margin-bottom: 5px;
+  }
+  
+  /* Chapter Button */
+  .chapter-btn {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    background: #f8f9fa;
+    border: 1px solid #ddd;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 220px;
+  }
+  
+  .chapter-btn:hover {
+    background: #e9ecef;
+  }
+  
+  .icon-left {
+    width: 20px;
+  }
+  
+  .icon-right {
+    margin-left: auto;
+  }
+  
+  /* Chapter Details */
+  .chapter-details {
+    border: 1px solid #ddd;
+    padding: 10px;
+    background: #fdfdfd;
+    border-radius: 5px;
+    width: 100%;
+  }
+  
+  #chap {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 10px;
+  }
+  
+  /* Topic Card */
+  .topic-card {
+    border: 1px solid #ccc;
+    padding: 10px;
+    border-radius: 5px;
+    background: #fffbe6;
+    margin-bottom: 10px;
+  }
+  
+  .topic-header {
+    display: flex;
+    justify-content: space-between;
+    cursor: pointer;
+    padding: 10px;
+    font-weight: bold;
+    background: #ffedcc;
+  }
+  
+  .topic-title {
+    flex: 1;
+    text-align: center;
+  }
+  
+  /* Subtopics */
+  .subtopics-container {
+    padding: 10px;
+    background: #fff3e6;
+    border-radius: 5px;
+  }
+  
+  .subtopic-card {
+    display: flex;
+    justify-content: space-between;
+    padding: 8px;
+    border-bottom: 1px solid #ddd;
+  }
+  
+  .subtopic-no {
+    font-weight: bold;
+  }
+  
+  .subtopic-title {
+    flex: 1;
+    text-align: center;
+  }
+  
+  /* Footer */
+  .footer {
+    margin-top: 20px;
+    text-align: center;
+    font-size: 14px;
+  }
+  
+  .footer a {
+    margin: 0 10px;
+    text-decoration: none;
+    color: #007bff;
+  }
+  
