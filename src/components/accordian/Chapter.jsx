@@ -6,8 +6,9 @@ import  book from "../../assets/icons/book.png";
 
 
 import TopBar from "./TopBar";
-import RightNavbar from "./RightNav";
+
 import PopUp from "./PopUp";
+import Sidebar from "./RightNav";
 
 const topics = [
     "Evaluate Mathematical Expressions in Python",
@@ -37,7 +38,7 @@ const Chapter = () => {
         
        </div>
        
-       <RightNavbar/>
+       <Sidebar/>
         </div>
         <div className="inner-cont d-flex align-items-start gap-4">
   {/* Left Section - Buttons */}

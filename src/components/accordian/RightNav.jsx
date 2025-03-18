@@ -5,15 +5,55 @@ import "../accordian/RightNav.css";
 
 
 
-const RightNavbar = () => {
+// const RightNavbar = () => {
+//     return (
+//       <div className="right-navbar">
+//         <FontAwesomeIcon icon={faHome} className="nav-icon" />
+//         <FontAwesomeIcon icon={faUser} className="nav-icon" />
+//         <FontAwesomeIcon icon={faBell} className="nav-icon" />
+//         <FontAwesomeIcon icon={faCog} className="nav-icon" />
+//       </div>
+//     );
+//   };
+  
+//   export default RightNavbar;
+
+
+
+
+
+
+ 
+  import progressIcon from "../../assets/icons/progress.png";
+  import statisticsIcon from "../../assets/icons/statistic.png";
+  import statisticsIconArrow from "../../assets/icons/statistic1.png";
+  import notesIcon from "../../assets/icons/notes.png";
+  import highlightsIcon from "../../assets/icons/Highlits.png";
+
+   
+  const Sidebar = () => {
     return (
-      <div className="right-navbar">
-        <FontAwesomeIcon icon={faHome} className="nav-icon" />
-        <FontAwesomeIcon icon={faUser} className="nav-icon" />
-        <FontAwesomeIcon icon={faBell} className="nav-icon" />
-        <FontAwesomeIcon icon={faCog} className="nav-icon" />
-      </div>
+      <aside className="sidebar">
+        <nav className="sidebar-nav">
+          <ul>
+            <li>
+              <img src={progressIcon} alt="Progress" />
+            </li>
+            <li>
+            <img src={statisticsIconArrow} alt="Arrow" className="arrow-icon" />
+              <img src={statisticsIcon} alt="Statistics" />
+            </li>
+            <li>
+              <img src={notesIcon} alt="Notes" />
+            </li>
+            <li>
+              <img src={highlightsIcon} alt="Highlights" />
+            </li>
+          </ul>
+        </nav>
+      </aside>
     );
   };
-  
-  export default RightNavbar;
+   
+  export default Sidebar;
+

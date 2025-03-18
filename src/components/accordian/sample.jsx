@@ -1,220 +1,11 @@
 
 
-      
-      
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-// import React, { useState } from "react";
-// import "../accordian/Chapter.css";
-// import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-// import { faChevronDown, faChevronUp } from "@fortawesome/free-solid-svg-icons";
-// import book from "../../assets/icons/book.png";
-
-// import TopBar from "./TopBar";
-// import RightNavbar from "./RightNav";
-// import PopUp from "./PopUp";
-
-// // Sample Data
-// const chapters = [
-//   {
-//     id: 1,
-//     title: "Evaluate Mathematical Expressions in Python",
-//     topics: [
-//       {
-//         id: 1,
-//         title: "Merge Two Lists Without Using Extend",
-//         subtopics: [
-//           { id: 1, title: "Using Loops and Operators" },
-//           { id: 2, title: "Using Built-in Functions" },
-//           { id: 3, title: "Using List Comprehensions" },
-//         ],
-//       },
-//       {
-//         id: 2,
-//         title: "Understanding Python Arithmetic Operations",
-//         subtopics: [
-//           { id: 1, title: "Addition & Subtraction" },
-//           { id: 2, title: "Multiplication & Division" },
-//           { id: 3, title: "Exponentiation & Modulus" },
-//         ],
-//       },
-//     ],
-//   },
-//   {
-//     id: 2,
-//     title: "Find the GCD and LCM of Two Numbers",
-//     topics: [],
-//   },
-// ];
-
-// const ChapterOne = () => {
-//   const [isPopupVisible, setPopupVisible] = useState(false);
-//   const [expandedChapters, setExpandedChapters] = useState({});
-//   const [expandedTopics, setExpandedTopics] = useState({});
-
-//   const toggleChapter = (id) => {
-//     setExpandedChapters({ ...expandedChapters, [id]: !expandedChapters[id] });
-//   };
-
-//   const toggleTopic = (id) => {
-//     setExpandedTopics({ ...expandedTopics, [id]: !expandedTopics[id] });
-//   };
-
-//   return (
-//     <div className="main-cont">
-//       <TopBar />
-//       <div className="out-comt">
-//         <div className="arrow-container">Python Course</div>
-//         <div id="btn-lern">
-//           <button className="btn-start" onClick={() => setPopupVisible(true)}>
-//             Start Learning
-//           </button>
-//         </div>
-//         <RightNavbar />
-//       </div>
-
-//       {/* Main Container */}
-//       <div className="inner-cont d-flex align-items-start gap-4">
-//         {/* Left - Chapter Buttons */}
-//         <div className="d-flex flex-column align-items-start gap-4" id="btns-chap">
-//           <p id="No">Chapter No</p>
-//           {chapters.map((chapter) => (
-//             <button
-//               key={chapter.id}
-//               className="btn chapter-btn"
-//               onClick={() => toggleChapter(chapter.id)}
-//             >
-//               <img src={book} className="icon-left" alt="Book Icon" />
-//               {chapter.title}
-//               <FontAwesomeIcon icon={expandedChapters[chapter.id] ? faChevronUp : faChevronDown} className="icon-right" />
-//             </button>
-//           ))}
-//         </div>
-
-//         {/* Right - Chapter Details */}
-//         <div className="math-container">
-//           {chapters.map(
-//             (chapter) =>
-//               expandedChapters[chapter.id] && (
-//                 <div key={chapter.id} className="chapter-details">
-//                   <p id="chap">Chapter {chapter.id}</p>
-
-//                   {/* Topics Section */}
-//                   {chapter.topics.length > 0 ? (
-//                     chapter.topics.map((topic) => (
-//                       <div key={topic.id} className="topic-card">
-//                         <div className="topic-header" onClick={() => toggleTopic(topic.id)}>
-//                           <span className="topic-no">Topic-{topic.id}</span>
-//                           <span className="topic-title">{topic.title}</span>
-//                           <FontAwesomeIcon icon={expandedTopics[topic.id] ? faChevronUp : faChevronDown} className="icon-right" />
-//                         </div>
-
-//                         {/* Subtopics Section */}
-//                         {expandedTopics[topic.id] && (
-//                           <div className="subtopics-container">
-//                             {topic.subtopics.map((subtopic) => (
-//                               <div key={subtopic.id} className="subtopic-card">
-//                                 <span className="subtopic-no">Subtopic-{subtopic.id}</span>
-//                                 <span className="subtopic-title">{subtopic.title}</span>
-//                               </div>
-//                             ))}
-//                           </div>
-//                         )}
-//                       </div>
-//                     ))
-//                   ) : (
-//                     <p className="no-topics">No topics available.</p>
-//                   )}
-//                 </div>
-//               )
-//           )}
-//         </div>
-//       </div>
-
-//       {/* Footer */}
-//       <div className="footer">
-//         <a href="#">Terms and Conditions</a> | <a href="#">Privacy Policy</a> |{" "}
-//         <a href="#">About Us</a> | <a href="#">Refund Policy</a>
-//       </div>
-
-//       {isPopupVisible && <PopUp onClose={() => setPopupVisible(false)} />}
-//     </div>
-//   );
-// };
-
-// export default ChapterOne;
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 import React, { useState } from "react";
-import "../accordian/Chapter.css";
+import "../accordian/sample.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faChevronDown,  } from "@fortawesome/free-solid-svg-icons";
 import  book from "../../assets/icons/book.png";
-
-
-import TopBar from "./TopBar";
-import RightNavbar from "./RightNav";
-import PopUp from "./PopUp";
+import topicicon from "../../assets/icons/topicr.png";
 
 const topic = [
     "Merge Two Lists Without Using Extend",
@@ -223,61 +14,151 @@ const topic = [
     "Merge Two Lists Without Using Extend",
     
   ];
+  const subtopic =[
+    "Combine two lists using loops, the + operator, or the...",
+    "Combine two lists using loops, the + operator, or the...",
+    "Combine two lists using loops, the + operator, or the...",
+
+  ];
+  
 
 
   
 const Topic = () => {
-    const [isPopupVisible,setPopupVisible] = useState(false)
+  const [selectedTopic, setSelectedTopic] = useState(null);
+  const [readTopics, setReadTopics] = useState({});
+  const [popupPosition, setPopupPosition] = useState({ top: 0, left: 0 });
+
+  const handleTopicClick = (index) => {
+    if (selectedTopic === index + 1) {
+      // Mark topic as read when closing
+      setReadTopics((prev) => ({ ...prev, [index + 1]: true }));
+      setSelectedTopic(null);
+    } else {
+      setSelectedTopic(index + 1);
+
+      
+      setPopupPosition({ top: React.top + window.scrollY + 50, left: React.left + 150 });
+
+    }
+  };
+    
 
 
   return (
 
-
     <div className="main-cont">
-        <TopBar/>
-        <div className="out-comt">
-        <div className="arrow-container">
-        Python Course
-       </div>
-       <div id="btn-lern">
-        <button className="btn-start" onClick={() => setPopupVisible(true)} > Start learning</button>
-        
-       </div>
-       
-       <RightNavbar/>
-        </div>
-        <div className="inner-cont d-flex align-items-start gap-4">
+        {/* topic container */}
+        <div className="outer-cont d-flex align-items-start gap-4">
   {/* Left Section - Buttons */}
-  <div className="d-flex flex-column align-items-start gap-4" id="btns-chap">
+  <div className="d-flex flex-column align-items-start gap-4" id="btns-topic">
     <p id="No">Topic No</p>
-    {[...Array(5)].map((_, index) => (
-      <button key={index} className="btn chapter-btn">
-        <img src={book} className="icon-left" alt="Book Icon" />
-        Topic - {index + 1}
+    {[...Array(2)].map((_, index) => {
+        let topicNumber = index + 1;
+        let isReading = selectedTopic === topicNumber;
+        let isRead = readTopics[topicNumber];
+        return(
+      <button key={index} className="btn topic-btn"
+      onClick={() => handleTopicClick(index)}
+      >
+
+        <img src={topicicon} className="icon-left" alt="Book Icon"
+           style={{
+            filter: isReading
+              ? "invert(31%) sepia(46%) saturate(530%) hue-rotate(248deg) brightness(91%) contrast(94%)" // Purple while reading
+              : isRead
+              ? "invert(40%) sepia(90%) saturate(500%) hue-rotate(100deg)" // Green after reading
+              : "none", // Default color
+          }} />
+        Topic - {topicNumber}
         <FontAwesomeIcon icon={faChevronDown} className="icon-right" />
       </button>
-    ))}
+        )
+})}
+     <button  className="btn topic-btn">
+        <img src={book} className="icon-left" alt="Book Icon" />
+        Mini Task
+      </button>
+
+      {[...Array(2)].map((_, index) => {
+          let topicNumber = index + 3;
+        return(
+      <button key={index} className="btn topic-btn">
+        <img src={topicicon} className="icon-left" alt="Book Icon" />
+        Topic - {topicNumber}
+
+        <FontAwesomeIcon icon={faChevronDown} className="icon-right" />
+      </button>
+        )
+})}
+     <button  className="btn topic-btn">
+        <img src={book} className="icon-left" alt="Book Icon" />
+        Mini Task
+      </button>
+
+
   </div>
 
   {/* Right Section - Cards */}
   <div className="math-container">
     <p id="chap">Topic </p>
-    {topic.map((topic, index) => (
-      <div key={index} className="math-card">
+    {topic. slice(0,2).map((topic, index) => (
+      <div key={index} className="topic-card">
        <p className="topic"> {topic}</p>
       </div>
     ))}
+     <div className="mini-task-message">
+  <span className="line-text">
+    There will be a mini task after the topic, complete it to proceed to the next topic.
+  </span>
+</div>
+<div className="math-container" style={{position:'relative',top:'10px'}}>
+{topic. slice(0,2).map((topic, index) => (
+      <div key={index} className="topic-card">
+       <p className="topic"> {topic}</p>
+      </div>
+    ))}
+</div>
+<div className="mini-task-message">
+  <span className="line-text">
+  There will be a final challenging task after the topic complete it to proceed to the next chapter.
+  </span>
+</div>
   </div>
+ 
 </div>
 
-       
-<div className="footer">
-      <a href="#">Terms and Conditions</a> | 
-      <a href="#">Privacy Policy</a> | 
-      <a href="#">About Us</a> | 
-      <a href="#">Refund Policy</a>
-    </div>
-    {isPopupVisible && <PopUp onClose={() => setPopupVisible(false)} />}
+{/* subtopic container */}
+
+{selectedTopic !== null && (
+  
+  <div className="subtopic-cont d-flex align-items-start gap-4"
+  style={{ position: "relative",
+    top: `${popupPosition.top}px`,
+    left: `${popupPosition.left}px`,
+    }}
+  >
+    
+    <div className="d-flex flex-column align-items-start gap-4" id="btns-subtopic">
+      <p id="No" style={{position:'relative',top:'20px',color:'#E77500'}}>Subtopic No</p>
+      {[...Array(3)].map((_, index) => (
+        <button key={index} className="btn subtopic-btn">
+          <img src={book} className="icon-left" alt="Book Icon" />
+          SubTopic - {index + 1}
+          
+        </button>
+      ))}
+      </div>
+      <div className="math-container">
+      <p id="chap" style={{color:'#E77500'}}>SubTopic </p>
+      {subtopic.map((subtopic, index) => (
+        <div key={index} className="subtopic-card">
+         <p className="topic"> {subtopic}</p>
+        </div>
+      ))}
+      </div>
+  </div>
+  )}
 
     </div>
 
@@ -286,6 +167,76 @@ const Topic = () => {
 };
 
 export default Topic;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

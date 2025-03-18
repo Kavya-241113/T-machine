@@ -10,8 +10,6 @@ function PopUp ({onClose}){
     
       <div className="popup-container">
       
-        
-      
         <div className="popup-message">
         <img src={Ailogo} alt="Ailogo" className="Tlogo" />
           <p className="pop-p">
@@ -24,13 +22,6 @@ function PopUp ({onClose}){
         </div>
       </div>
     </div>
-
-
-
-     
-
-
-
 
         </>
     )
