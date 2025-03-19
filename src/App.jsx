@@ -17,12 +17,10 @@ function App() {
   return (
     <>
       
-      <Chapter/> 
+      {/* <Chapter/>  */}
       {/* <TopCrumb/> */}
-      {/* <Dropdown/> */}
+      <Dropdown/>
       {/* <ChapterOne/> */}
-    
-      
     </>
   )
 }
