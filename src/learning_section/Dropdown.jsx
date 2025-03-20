@@ -75,6 +75,9 @@ function Dropdown (){
             </button>
            )})}
          </div>
+
+         
+
           {/* Display Content when a Chapter is Clicked */}
           {selectedButton !== null && (
          <div className="first container" style={{

@@ -7,6 +7,7 @@ import TopCrumb from './learning_section/TopCrumb'
 import ChapterDropdown from './learning_section/TopCrumb'
 import Dropdown from './learning_section/Dropdown'
 import ChapterOne from './components/accordian/sample'
+import TrueFalsePage from './learning_section/TrueFalse'
 
 
 
@@ -19,8 +20,9 @@ function App() {
       
       {/* <Chapter/>  */}
       {/* <TopCrumb/> */}
-      <Dropdown/>
+      {/* <Dropdown/> */}
       {/* <ChapterOne/> */}
+      <TrueFalsePage/>
     </>
   )
 }
