@@ -66,7 +66,7 @@ function Dropdown (){
                     ? "invert(31%) sepia(46%) saturate(530%) hue-rotate(248deg) brightness(91%) contrast(94%)" // Purple while reading
                     : isRead
                     ? "invert(40%) sepia(90%) saturate(500%) hue-rotate(100deg)" // Green after reading
-                    : "none", // Default color
+                    : "none",
                  }}/>
 
                 {chapterNumber}
@@ -76,7 +76,7 @@ function Dropdown (){
            )})}
          </div>
 
-         
+
 
           {/* Display Content when a Chapter is Clicked */}
           {selectedButton !== null && (

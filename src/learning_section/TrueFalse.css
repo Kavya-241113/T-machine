@@ -1,0 +1,240 @@
+
+
+/* Top Section */
+.arrow-container {
+    width: 148px;
+    height: 27px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(90deg, #1274FF -81.08%, #A36AFF 46.05% , #FF31A6 181.76%);
+    color: white;
+    font-size: 14px;
+    font-weight: bold;
+    border-radius: 5px;
+    border: 0.5px solid rgba(255, 255, 255, 0.5);
+    position: relative;
+    top: 20px;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2); /* Soft shadow for effect */
+    padding: 5px 10px;
+    white-space: nowrap;
+  }
+  
+  /* Create the right arrow effect */
+  .arrow-container::after {
+    content: "";
+    position: absolute;
+    right: -10px;
+    top: 50%;
+    transform: translateY(-50%);
+    border-left: 11px solid #c05fd3  ;
+    border-top: 12px solid transparent;
+    border-bottom: 13px solid transparent;
+   
+    
+  }
+
+/* Chapter Buttons */
+
+.chapter-btn {
+    width: 200px;
+    padding: 8px 16px;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 100%;
+
+    display: flex;
+   
+    align-items: center;
+    justify-content: space-between;
+   background-color: #E1EAFF;
+    color: #4D4D4D;
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    border-radius: 8px;
+    cursor: pointer;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease-in-out;
+    
+  }
+  
+  .chapter-btn:hover {
+   
+    filter: brightness(1.1);
+  }
+  
+  .icon-left {
+    margin-right: 8px;
+  }
+  
+  .icon-right {
+    margin-left: 8px;
+  }
+  #btns-chap{
+    position: relative;
+    left: 10px;
+    top: 20px;
+  }
+  #btns-chap {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+  #No{
+    font-size: 15px;
+    font-weight: 500;
+    line-height: 100%;
+    letter-spacing: 0%;
+    color: #214DBA;
+    position: relative;
+    left: 10px;
+  }
+  #chap{
+    font-size: 15px;
+    font-weight: 500;
+    line-height: 100%;
+    letter-spacing: 0%;
+    color: #214DBA;
+    position: relative;
+    top: 20px;
+    left: 50px;
+
+  }
+
+
+
+
+
+
+
+
+
+
+
+/* Main Content Styling */
+.content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background: #f9f9f9;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    max-width: 500px;
+    margin: 30px auto;
+    position: relative;
+    top: -500px;
+}
+
+/* Question Section */
+.question-section {
+    text-align: center;
+    width: 100%;
+}
+
+.true-false-header {
+    font-size: 24px;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 15px;
+}
+
+.question-box {
+    background: #fff;
+    padding: 15px;
+    border-radius: 8px;
+    border: 1px solid #ddd;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Progress Bar & Timer */
+.progress-section {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 20px 0;
+    width: 100%;
+}
+
+.progress-bar {
+    width: 80%;
+    height: 10px;
+    background: #ddd;
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+.progress-fill {
+    height: 100%;
+    background: #6a1b9a; /* Purple */
+    transition: width 0.5s ease-in-out;
+}
+
+.timer-circle {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: #6a1b9a;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+}
+
+/* Answer Buttons */
+.answer-buttons {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    margin-top: 15px;
+}
+
+.answer-btn {
+    width: 120px;
+    padding: 10px;
+    font-size: 16px;
+    font-weight: bold;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.answer-btn:first-child {
+    background: #4caf50; /* Green for True */
+    color: #fff;
+}
+
+.answer-btn:last-child {
+    background: #f44336; /* Red for False */
+    color: #fff;
+}
+
+.answer-btn.selected {
+    border: 3px solid #222;
+    opacity: 0.8;
+}
+
+/* Next Button */
+.next-btn {
+    background: #6a1b9a;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 20px;
+    transition: background 0.3s;
+}
+
+.next-btn:disabled {
+    background: #bbb;
+    cursor: not-allowed;
+}
+
+.next-btn:hover:not(:disabled) {
+    background: #4a148c;
+}
