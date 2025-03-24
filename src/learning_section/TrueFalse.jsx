@@ -111,11 +111,13 @@ function TrueFalsePage() {
 
 
             {/* True/False Section */}
+            {selectedButton !== null && (
             <div className="">
             <div className="content">
                 <div className="question-section">
-                    <h2 className="true-false-header">True / False</h2>
+                   
                     <div className="question-box">
+                    <h2 className="true-false-header">True / False</h2>
                         <p>{currentQuestion.question}</p>
                     </div>
 
@@ -138,6 +140,7 @@ function TrueFalsePage() {
                 </div>
             </div>
             </div>
+            )}
 
             {/* Footer */}
             <div className="footer" style={{ position: 'relative', top: '-250px' }}>
