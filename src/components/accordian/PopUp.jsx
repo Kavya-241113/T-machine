@@ -1,9 +1,15 @@
 import React from "react";
+import { useNavigate } from "react-router-dom";
 import '../accordian/Popup.css';
 import Ailogo from '../../assets/icons/Tlogo.png';
 
  
 function PopUp ({onClose}){
+  const navigate = useNavigate();
+
+  const handleNavigate = () => {
+    navigate("/dropdown" ,{replace:true});
+};
     return(
         <>
     <div className="popup-overlay">
@@ -18,13 +24,13 @@ function PopUp ({onClose}){
           </p>
         </div>
         <div className="popup-button">
-          <button onClick={onClose}>Yes</button>
+        <button onClick={handleNavigate}>yes</button>      
         </div>
       </div>
     </div>
 
-        </>
-    )
+        </>     
+    )      
 
 }
 export default PopUp;

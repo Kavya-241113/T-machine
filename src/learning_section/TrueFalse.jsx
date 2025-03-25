@@ -107,9 +107,6 @@ function TrueFalsePage() {
                     )
                 })}
             </div>
-
-
-
             {/* True/False Section */}
             {selectedButton !== null && (
             <div className="">
