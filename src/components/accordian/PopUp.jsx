@@ -3,7 +3,7 @@ import { useNavigate } from "react-router-dom";
 import '../accordian/Popup.css';
 import Ailogo from '../../assets/icons/Tlogo.png';
 
- 
+
 function PopUp ({onClose}){
   const navigate = useNavigate();
 
@@ -24,7 +24,7 @@ function PopUp ({onClose}){
           </p>
         </div>
         <div className="popup-button">
-        <button onClick={handleNavigate}>yes</button>      
+        <button onClick={handleNavigate(onClose)}>yes</button>      
         </div>
       </div>
     </div>
@@ -34,3 +34,7 @@ function PopUp ({onClose}){
 
 }
 export default PopUp;
+
+
+
+

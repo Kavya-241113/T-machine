@@ -6,8 +6,6 @@
     position: relative;
     right: 0;
     left: 95%;
-   
-   
     margin-top: -3%;
     display: flex;
     flex-direction: column;
@@ -35,22 +33,7 @@
 
 
 
-/*   
-.sidebar {
-  position: fixed;
-  right: 70px;
-  top: 110px;
-  height: 85%; 
-  width: 50px;
-  background: #fff;
-  box-shadow: -2px 0 5px rgba(0, 0, 0, 0.2);
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding-top: 10px;
-  z-index: 1000;
-  justify-content: space-between;
-} */
+
  
 /* Sidebar Navigation */
 .sidebar-nav ul {

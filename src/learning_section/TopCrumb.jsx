@@ -1,7 +1,6 @@
 
-
 import React, { useState } from "react";
-import { Navbar, Container, Breadcrumb, Dropdown } from "react-bootstrap";
+import {  Container, Breadcrumb, Dropdown } from "react-bootstrap";
 import bookIcon from "../assets/icons/book-1.png";  
 import topicIcon from "../assets/icons/topic.png"; 
 import subtopicIcon from "../assets/icons/subtopic.png"; 
@@ -86,7 +85,6 @@ const TopCrumb = () => {
             </Dropdown>
 
           </Breadcrumb>
-          
         </Container>
       
     </>

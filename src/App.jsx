@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { Routes, Route } from "react-router-dom";
 
 
 import './App.css'
@@ -15,25 +15,17 @@ import PopUp from './components/accordian/PopUp';
 
 
 function App() {
-
- 
+  const [showPopup, setShowPopup] = useState(true);
 
   return (
     <>
-    
-    <Chapter />
+      <Chapter />
+      {showPopup && <PopUp onClose={() => setShowPopup(false)} />}
       <Routes>
-        <Route path="/" element={<PopUp />} />
         <Route path="/dropdown" element={<Dropdown />} />
       </Routes>
-      
-     
-      {/* <TopCrumb/> */}
-      {/* <Dropdown/> */}
-      {/* <ChapterOne/> */}
-      {/* <TrueFalsePage/> */}
     </>
-  )
+  );
 }
 
-export default App
+export default App;

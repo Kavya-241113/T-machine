@@ -40,14 +40,11 @@
   .topic-btn{
     width: 150px;
     height: 35px;
-
     padding: 8px 16px;
     font-size: 14px;
     font-weight: 400;
     line-height: 100%;
-
     display: flex;
-   
     align-items: center;
     justify-content: space-between;
    background-color:#FFEBBD ;
@@ -86,10 +83,10 @@
   .line-text::after {
     content: "";
     display: block;
-    width: 150px; /* Adjust this to increase/decrease the line size */
-    height: 2px; /* Thickness of the line */
+    width: 150px; 
+    height: 2px; 
     background-color: #FF6ECE;
-    margin: 0 15px; /* Space between text and line */
+    margin: 0 15px; 
     position: relative;
    
   }
