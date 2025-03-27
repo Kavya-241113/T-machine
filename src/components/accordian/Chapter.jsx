@@ -20,8 +20,13 @@ const topics = [
 
 
   
-const Chapter = () => {
-    const [isPopupVisible,setPopupVisible] = useState(false)
+const Chapter = ({ onStartLearning }) => {
+  const [isPopupVisible, setPopupVisible] = useState(false);
+
+
+  const handleStartLearning = () => {
+    setPopupVisible(true);
+  };
 
 
   return (
@@ -34,9 +39,19 @@ const Chapter = () => {
         Python Course
        </div>
        <div id="btn-lern">
-        <button className="btn-start" onClick={() => setPopupVisible(true)} > Start learning</button>
-        
+       <button className="btn-start" onClick={handleStartLearning}>
+        Start learning
+      </button>
+      {isPopupVisible && (
+        <PopUp
+          onClose={() => {
+            setPopupVisible(false);
+            onStartLearning(); // trigger global change to show Dropdown
+          }}
+        />
+      )}
        </div>
+
        
        <Sidebar/>
         </div>

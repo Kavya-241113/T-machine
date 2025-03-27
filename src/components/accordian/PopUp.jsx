@@ -8,8 +8,9 @@ function PopUp ({onClose}){
   const navigate = useNavigate();
 
   const handleNavigate = () => {
-    navigate("/dropdown" ,{replace:true});
-};
+    onClose(); // Optionally update local state before navigating
+    navigate("/dropdown", { replace: true });
+  };
     return(
         <>
     <div className="popup-overlay">
@@ -24,7 +25,7 @@ function PopUp ({onClose}){
           </p>
         </div>
         <div className="popup-button">
-        <button onClick={handleNavigate(onClose)}>yes</button>      
+        <button onClick={handleNavigate}>Yes</button>    
         </div>
       </div>
     </div>

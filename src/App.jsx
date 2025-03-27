@@ -1,5 +1,6 @@
 import { useState } from 'react'
-import { Routes, Route } from "react-router-dom";
+import { Routes, Route, Navigate } from "react-router-dom";
+
 
 
 import './App.css'
@@ -15,17 +16,23 @@ import PopUp from './components/accordian/PopUp';
 
 
 function App() {
-  const [showPopup, setShowPopup] = useState(true);
+  const [learningStarted, setLearningStarted] = useState(false);
+  
 
   return (
-    <>
-      <Chapter />
-      {showPopup && <PopUp onClose={() => setShowPopup(false)} />}
-      <Routes>
-        <Route path="/dropdown" element={<Dropdown />} />
-      </Routes>
-    </>
+    <Routes>
+      {/* When learning hasn't started, render Chapter at "/" */}
+      <Route 
+        path="/" 
+        element={
+          learningStarted 
+            ? <Navigate to="/dropdown" replace /> 
+            : <Chapter onStartLearning={() => setLearningStarted(true)} />
+        }  
+      />
+      {/* Render Dropdown at "/dropdown" */}
+      <Route path="/dropdown" element={<Dropdown />} />
+    </Routes>
   );
 }
-
 export default App;
