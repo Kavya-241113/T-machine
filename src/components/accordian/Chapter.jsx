@@ -9,6 +9,7 @@ import TopBar from "./TopBar";
 
 import PopUp from "./PopUp";
 import Sidebar from "./RightNav";
+import Topic from "./sample";
 
 const topics = [
     "Evaluate Mathematical Expressions in Python",
@@ -22,12 +23,20 @@ const topics = [
   
 const Chapter = ({ onStartLearning }) => {
   const [isPopupVisible, setPopupVisible] = useState(false);
+  const [selectedChapter, setSelectedChapter] = useState(-1);
 
 
   const handleStartLearning = () => {
     setPopupVisible(true);
   };
 
+  const handleChapterClick = (index) => {
+    if (selectedChapter === index) {
+      setSelectedChapter(-1); // close if already open
+    } else {
+      setSelectedChapter(index);
+    }
+  };
 
   return (
 
@@ -59,13 +68,29 @@ const Chapter = ({ onStartLearning }) => {
   {/* Left Section - Buttons */}
   <div className="d-flex flex-column align-items-start gap-4" id="btns-chap">
     <p id="No">Chapter No</p>
-    {[...Array(5)].map((_, index) => (
-      <button key={index} className="btn chapter-btn">
-        <img src={book} className="icon-left" alt="Book Icon" />
-        Chapter - {index + 1}
-        <FontAwesomeIcon icon={faChevronDown} className="icon-right" />
-      </button>
-    ))}
+    
+   
+
+ {[...Array(5)].map((_, index) => (
+            <div key={index} >
+              <button
+                className="btn chapter-btn"
+                onClick={() => handleChapterClick(index)}
+              >
+                <img src={book} className="icon-left" alt="Book Icon" />
+                Chapter - {index + 1}
+                <FontAwesomeIcon icon={faChevronDown} className="icon-right" />
+              </button>
+
+              {/* If this chapter is selected, show the Topic component below */}
+              {selectedChapter === index && (
+                <div style={{ marginLeft: "20px" }}>
+                <Topic/>
+                </div>
+              )}
+            </div>
+          ))}
+
   </div>
 
   {/* Right Section - Cards */}

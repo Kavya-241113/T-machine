@@ -12,6 +12,7 @@ import Dropdown from './learning_section/Dropdown'
 import ChapterOne from './components/accordian/sample'
 import TrueFalsePage from './learning_section/TrueFalse'
 import PopUp from './components/accordian/PopUp';
+import Topic from './components/accordian/sample';
 
 
 
@@ -33,6 +34,10 @@ function App() {
       {/* Render Dropdown at "/dropdown" */}
       <Route path="/dropdown" element={<Dropdown />} />
     </Routes>
+    // <>
+    // <Topic/>
+    // </>
+
   );
 }
 export default App;

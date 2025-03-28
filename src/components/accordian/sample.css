@@ -95,12 +95,12 @@
 
 
   .subtopic-cont{
-    width: 1100px;
+    width: 1000px;
     height: 225px;
     background: #FFB98B30;
     border: 1px solid #FA7E00;
     position: relative;
-    top: -300px;
+    top: -10px;
     left: 80px;
     z-index: 1000,;
 
